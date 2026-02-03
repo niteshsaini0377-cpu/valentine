@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Be My Valentine ❤️</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    }
+    .heart {
+      position: absolute;
+      animation: float 6s infinite ease-in-out;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-120vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body class="overflow-hidden flex items-center justify-center min-h-screen text-center">  <!-- Floating hearts -->  <script>
+    for (let i = 0; i < 25; i++) {
+      const heart = document.createElement('div');
+      heart.innerHTML = '❤️';
+      heart.className = 'heart text-2xl';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 4 + Math.random() * 4 + 's';
+      heart.style.bottom = '-20px';
+      document.body.appendChild(heart);
+    }
+  </script>  <div class="bg-white/80 backdrop-blur-lg p-8 rounded-3xl shadow-2xl max-w-md relative z-10">
+    <h1 class="text-4xl font-bold text-pink-600 mb-4">Hey Love 💖</h1>
+    <p class="text-lg text-gray-700 mb-6">
+      I’ve been thinking… and after deep research, emotional calculations,
+      and lots of taunting from your side 🧠❤️ — I am finally asking you.
+    </p><h2 class="text-2xl font-semibold text-red-500 mb-6">You make my life better every day, every minute my noor-e-nazar, my jaan-e-jigar.</h2>
+
+<p class="text-gray-700 mb-8">
+  You’re my favorite notification 📱, my comfort zone 🫂,
+  and the reason I smile at my phone like an idiot 😄.
+</p>
+
+<h3 class="text-3xl font-extrabold text-pink-700 mb-8">So… will you be my Valentine this year, Varnika? 🌹</h3>
+
+<div class="flex justify-center gap-6">
+  <button onclick="yesClicked()" class="px-6 py-3 bg-pink-500 text-white rounded-full text-lg font-semibold hover:bg-pink-600 transition">
+    YES 💘
+  </button>
+  <button onmouseover="moveNo(this)" class="px-6 py-3 bg-gray-300 text-gray-700 rounded-full text-lg font-semibold">
+    No 🙃
+  </button>
+</div>
+
+<p id="response" class="mt-8 text-2xl font-bold text-red-600 hidden"></p>
+
+  </div>  <script>
+    function yesClicked() {
+      const msg = document.getElementById('response');
+      msg.innerText = "YAY!! 🥰 I knew it, but obvio!  Gonna be best Valentine ever 💕";
+      msg.classList.remove('hidden');
+    }
+
+    function moveNo(btn) {
+      btn.style.position = 'absolute';
+      btn.style.left = Math.random() * 80 + '%';
+      btn.style.top = Math.random() * 80 + '%';
+    }
+  </script></body>
+</html>
